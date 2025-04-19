@@ -58,8 +58,7 @@ class DataIngestion:
             train_set, test_set = train_test_split(df, test_size=TEST_SIZE)
             logging.info("Performed train test split on the dataframe")
 
-            os.makedirs(
-                self.data_ingestion_config.TRAIN_DATA_ARTIFACT_FILE_DIR, exist_ok=True)
+            os.makedirs(self.data_ingestion_config.TRAIN_DATA_ARTIFACT_FILE_DIR, exist_ok=True)
             logging.info(
                 f"Created {os.path.basename(self.data_ingestion_config.TRAIN_DATA_ARTIFACT_FILE_DIR)} directory."
             )

@@ -1,0 +1,182 @@
+[ 2025-04-19 13:43:40,136 ] root - INFO - Entered the read_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:40,376 ] root - INFO - Entered the read_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:40,419 ] root - INFO - Entered the read_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:40,426 ] root - INFO - Entered the run_pipeline method of TrainPipeline class
+[ 2025-04-19 13:43:40,426 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2025-04-19 13:43:40,426 ] root - INFO - Getting the data from mongodb
+[ 2025-04-19 13:43:40,426 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2025-04-19 13:43:40,426 ] root - INFO - Entered get_data_from_mongodb method of Data_Ingestion class
+[ 2025-04-19 13:43:40,426 ] root - INFO - Getting the dataframe from mongodb
+[ 2025-04-19 13:43:40,426 ] root - INFO - Entered get_collection_as_dataframe method of MongoDB_Operation class
+[ 2025-04-19 13:43:40,426 ] root - INFO - Entered get_database method of MongoDB_Operation class
+[ 2025-04-19 13:43:40,426 ] root - INFO - Created shipping database in MongoDB
+[ 2025-04-19 13:43:40,426 ] root - INFO - Exited get_database method MongoDB_Operation class
+[ 2025-04-19 13:43:41,448 ] root - INFO - Converted collection to dataframe
+[ 2025-04-19 13:43:41,449 ] root - INFO - Exited get_collection_as_dataframe method of MongoDB_Operation class
+[ 2025-04-19 13:43:41,449 ] root - INFO - Got the dataframe from mongodb
+[ 2025-04-19 13:43:41,449 ] root - INFO - Exited the get_data_from_mongodb method of Data_Ingestion class
+[ 2025-04-19 13:43:41,453 ] root - INFO - Got the data from mongodb
+[ 2025-04-19 13:43:41,453 ] root - INFO - Entered split_data_as_train_test method of Data_Ingestion class
+[ 2025-04-19 13:43:41,455 ] root - INFO - Performed train test split on the dataframe
+[ 2025-04-19 13:43:41,455 ] root - INFO - Created Train directory.
+[ 2025-04-19 13:43:41,455 ] root - INFO - Created Test directory.
+[ 2025-04-19 13:43:41,474 ] root - INFO - Converted Train Dataframe and Test Dataframe into csv
+[ 2025-04-19 13:43:41,474 ] root - INFO - Saved train.csv,                 test.csv in                     DataIngestionArtifacts.
+[ 2025-04-19 13:43:41,474 ] root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-04-19 13:43:41,474 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2025-04-19 13:43:41,477 ] root - INFO - Got the train_set and test_set from mongodb
+[ 2025-04-19 13:43:41,477 ] root - INFO - Exited the start_data_ingestion method of TrainPipeline class
+[ 2025-04-19 13:43:41,477 ] root - INFO - Entered the start_data_validation method of TrainPipeline class
+[ 2025-04-19 13:43:41,477 ] root - INFO - Entered initiate_data_validation method of Data_Validation class
+[ 2025-04-19 13:43:41,485 ] root - INFO - Initiated data validation for the dataset
+[ 2025-04-19 13:43:41,485 ] root - INFO - Created Artifacts directory for DataValidationArtifacts
+[ 2025-04-19 13:43:41,581 ] root - INFO - Entered the write_json_to_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:41,595 ] root - INFO - Entered validate_dataset_schema_columns method of Data_Validation class
+[ 2025-04-19 13:43:41,595 ] root - INFO - Validating dataset schema columns
+[ 2025-04-19 13:43:41,595 ] root - INFO - Validated dataset schema columns on the train set
+[ 2025-04-19 13:43:41,595 ] root - INFO - Validated dataset schema columns on the test set
+[ 2025-04-19 13:43:41,595 ] root - INFO - Validated dataset schema columns
+[ 2025-04-19 13:43:41,595 ] root - INFO - Schema train cols status is False and schema test cols status is False
+[ 2025-04-19 13:43:41,595 ] root - INFO - Entered validate_dataset_schema_for_numerical_datatype method of Data_Validation class
+[ 2025-04-19 13:43:41,595 ] root - INFO - Validating dataset schema for categorical datatype
+[ 2025-04-19 13:43:41,595 ] root - INFO - Categorical column - Customer Id not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Artist Name not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Scheduled Date not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Delivery Date not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Customer Location not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Validated dataset schema for categorical datatype for train set
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Customer Id not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Artist Name not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Scheduled Date not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Delivery Date not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Categorical column - Customer Location not found in dataframe
+[ 2025-04-19 13:43:41,596 ] root - INFO - Validated dataset schema for categorical datatype for test set
+[ 2025-04-19 13:43:41,596 ] root - INFO - Exited validate_dataset_schema_for_categorical_datatype method of Data_Validation class
+[ 2025-04-19 13:43:41,596 ] root - INFO - Schema train cat cols status is True and schema test cat cols status is True
+[ 2025-04-19 13:43:41,596 ] root - INFO - Entered validate_dataset_schema_for_numerical_datatype method of Data_Validation class
+[ 2025-04-19 13:43:41,596 ] root - INFO - Validating dataset schema for numerical datatype
+[ 2025-04-19 13:43:41,596 ] root - INFO - Validated dataset schema for numerical datatype for train set
+[ 2025-04-19 13:43:41,596 ] root - INFO - Validated dataset schema for numerical datatype for test set
+[ 2025-04-19 13:43:41,596 ] root - INFO - Exited validate_dataset_schema_for_numerical_datatype method of Data_Validation class
+[ 2025-04-19 13:43:41,596 ] root - INFO - Schema train numerical cols status is True and schema test numerical cols status is True
+[ 2025-04-19 13:43:41,596 ] root - INFO - Performed the data validation operation
+[ 2025-04-19 13:43:41,596 ] root - INFO - Exited the start_data_validation method of TrainPipeline class
+[ 2025-04-19 13:43:41,596 ] root - INFO - Entered the start_data_transformation method of TrainPipeline class
+[ 2025-04-19 13:43:41,603 ] root - INFO - Entered initiate_data_transformation method of Data_Transformation class
+[ 2025-04-19 13:43:41,603 ] root - INFO - Created artifacts directory for DataTransformationArtifacts
+[ 2025-04-19 13:43:41,603 ] root - INFO - Entered get_data_transformer_object method of Data_Ingestion class
+[ 2025-04-19 13:43:41,603 ] root - INFO - Got numerical cols,one hot cols,binary cols from schema config
+[ 2025-04-19 13:43:41,603 ] root - INFO - Created preprocessor object from ColumnTransformer
+[ 2025-04-19 13:43:41,603 ] root - INFO - Exited get_data_transformer_object method of Data_Ingestion class
+[ 2025-04-19 13:43:41,603 ] root - INFO - Got the preprocessor object
+[ 2025-04-19 13:43:41,603 ] root - INFO - Got target column name and numerical columns from schema config
+[ 2025-04-19 13:43:41,604 ] root - INFO - Got a list of continuous_columns
+[ 2025-04-19 13:43:41,604 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,604 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,606 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,606 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,606 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,606 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,607 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,607 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,607 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,607 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,608 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,608 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,608 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,608 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,609 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,609 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,609 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,609 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,610 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,610 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,610 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,610 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,611 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,611 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,611 ] root - INFO - Outlier capped in train df
+[ 2025-04-19 13:43:41,611 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,611 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,612 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,612 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,612 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,612 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,612 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,612 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,612 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,612 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,613 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,613 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,613 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,613 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,615 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,615 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,615 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,615 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,616 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,616 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,616 ] root - INFO - Entered _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,616 ] root - INFO - Performing _outlier_capping for columns in the dataframe
+[ 2025-04-19 13:43:41,616 ] root - INFO - Performed _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,616 ] root - INFO - Exited _outlier_capping method of Data_Transformation class
+[ 2025-04-19 13:43:41,616 ] root - INFO - Outlier capped in test df
+[ 2025-04-19 13:43:41,617 ] root - INFO - Got train features and test feature
+[ 2025-04-19 13:43:41,637 ] root - INFO - Used the preprocessor object to transform the test features
+[ 2025-04-19 13:43:41,637 ] root - INFO - Created train array.
+[ 2025-04-19 13:43:41,637 ] root - INFO - Entered the save_numpy_array_data method of MainUtils class
+[ 2025-04-19 13:43:41,638 ] root - INFO - Exited the save_numpy_array_data method of MainUtils class
+[ 2025-04-19 13:43:41,638 ] root - INFO - Saved train array to DataTransformationArtifacts
+[ 2025-04-19 13:43:41,638 ] root - INFO - Created test array.
+[ 2025-04-19 13:43:41,638 ] root - INFO - Entered the save_numpy_array_data method of MainUtils class
+[ 2025-04-19 13:43:41,638 ] root - INFO - Exited the save_numpy_array_data method of MainUtils class
+[ 2025-04-19 13:43:41,638 ] root - INFO - Saved test array to DataTransformationArtifacts
+[ 2025-04-19 13:43:41,638 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2025-04-19 13:43:41,641 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2025-04-19 13:43:41,641 ] root - INFO - Saved the preprocessor object in DataTransformation artifacts directory.
+[ 2025-04-19 13:43:41,641 ] root - INFO - Exited initiate_data_transformation method of Data_Transformation class
+[ 2025-04-19 13:43:41,642 ] root - INFO - Exited the start_data_transformation method of TrainPipeline class
+[ 2025-04-19 13:43:41,642 ] root - INFO - Entered initiate_model_trainer nethod of ModelTrainer class
+[ 2025-04-19 13:43:41,642 ] root - INFO - Created artifacts directory for DataTransformationArtifacts
+[ 2025-04-19 13:43:41,642 ] root - INFO - Entered the load_numpy_array_data method of MainUtils class
+[ 2025-04-19 13:43:41,644 ] root - INFO - Loaded train array from DataTransformationArtifacts directory and converted into Dataframe.
+[ 2025-04-19 13:43:41,644 ] root - INFO - Entered the load_numpy_array_data method of MainUtils class
+[ 2025-04-19 13:43:41,645 ] root - INFO - Loaded test array from DataTransformationArtifacts directory and converted into Dataframe.
+[ 2025-04-19 13:43:41,645 ] root - INFO - Entered get_trained_models method of ModelTrainer class
+[ 2025-04-19 13:43:41,645 ] root - INFO - Entered the read_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:41,646 ] root - INFO - Got model list from the config file
+[ 2025-04-19 13:43:41,647 ] root - INFO - Entered the get_tuned_model method of MainUtils class
+[ 2025-04-19 13:43:41,647 ] root - INFO - Entered the get_base_model method of MainUtils class
+[ 2025-04-19 13:43:44,285 ] root - INFO - Exited the get_base_model method of MainUtils class
+[ 2025-04-19 13:43:44,285 ] root - INFO - Entered the get_model_params method of MainUtils class
+[ 2025-04-19 13:43:44,285 ] root - INFO - Entered the read_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:50,426 ] root - INFO - Exited the get_model_params method of MainUtils class
+[ 2025-04-19 13:43:50,530 ] root - INFO - Entered the get_model_score method of MainUtils class
+[ 2025-04-19 13:43:50,531 ] root - INFO - Model score is 0.11840620371817978
+[ 2025-04-19 13:43:50,531 ] root - INFO - Exited the get_model_score method of MainUtils class
+[ 2025-04-19 13:43:50,531 ] root - INFO - Exited the get_tuned_model method of MainUtils class
+[ 2025-04-19 13:43:50,531 ] root - INFO - Entered the get_tuned_model method of MainUtils class
+[ 2025-04-19 13:43:50,531 ] root - INFO - Entered the get_base_model method of MainUtils class
+[ 2025-04-19 13:43:50,531 ] root - INFO - Exited the get_base_model method of MainUtils class
+[ 2025-04-19 13:43:50,531 ] root - INFO - Entered the get_model_params method of MainUtils class
+[ 2025-04-19 13:43:50,531 ] root - INFO - Entered the read_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:52,331 ] root - INFO - Exited the get_model_params method of MainUtils class
+[ 2025-04-19 13:43:52,477 ] root - INFO - Entered the get_model_score method of MainUtils class
+[ 2025-04-19 13:43:52,477 ] root - INFO - Model score is 0.16265439518042524
+[ 2025-04-19 13:43:52,478 ] root - INFO - Exited the get_model_score method of MainUtils class
+[ 2025-04-19 13:43:52,478 ] root - INFO - Exited the get_tuned_model method of MainUtils class
+[ 2025-04-19 13:43:52,478 ] root - INFO - Got trained model list
+[ 2025-04-19 13:43:52,478 ] root - INFO - Exited the get_trained_models method of ModelFinder class
+[ 2025-04-19 13:43:52,478 ] root - INFO - Got a list of tuple of model score,model and model name
+[ 2025-04-19 13:43:52,478 ] root - INFO - Entered the get_best_model_with_name_and_score method of MainUtils class
+[ 2025-04-19 13:43:52,478 ] root - INFO - Exited the get_best_model_with_name_and_score method of MainUtils class
+[ 2025-04-19 13:43:52,478 ] root - INFO - Got best model score,model and model name
+[ 2025-04-19 13:43:52,478 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2025-04-19 13:43:52,479 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2025-04-19 13:43:52,479 ] root - INFO - Loaded preprocessing object
+[ 2025-04-19 13:43:52,479 ] root - INFO - Entered the read_yaml_file method of MainUtils class
+[ 2025-04-19 13:43:52,480 ] root - INFO - Created cost model object with preprocessor and model
+[ 2025-04-19 13:43:52,481 ] root - INFO - Created best model file path
+[ 2025-04-19 13:43:52,481 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2025-04-19 13:43:52,485 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2025-04-19 13:43:52,485 ] root - INFO - Saved the best model object path
